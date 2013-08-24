@@ -32,6 +32,3 @@ tags: 文章模板
 5.	Git插件：<https://github.com/kemayo/sublime-text-2-git>
 
 
-
-{% include references.md %}
-{% include pictures.md %}
