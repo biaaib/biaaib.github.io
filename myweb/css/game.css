@@ -1,0 +1,59 @@
+/* === CSS RESET === */
+table{
+	border-collapse:collapse;
+	border-width:15px;
+	border: 1px solid SteelBlue   ;
+	margin:30px 0px 0px 400px;
+	float:left;
+}
+td{
+	border: 1px solid SteelBlue ;
+	width:30px;
+	height:30px;
+}
+ul{
+	list-style-type:none;
+}
+#aaa{  
+   float:left;
+}
+#bbb{
+   float:left;
+}
+#panel{
+   margin:45px 0px 20px 10px;
+}
+#panel2{
+   /*background-color:Green;*/
+	margin:80px 0px 0px 10px;          
+}
+#panel2 td{
+	border-color:white;
+	width:100px;
+	border-bottom-width:20px;
+}
+.scoregrid{
+	background:#F0F0F0 ;
+	padding-top:3px;
+	border-top:1px solid #708090;
+	border-right:1px solid #708090;
+	border-bottom:1px solid #708090;
+	border-left:1px solid #708090; 
+	width:130px;
+	height:45px;
+	font-size:15pt;
+}
+.aaa{
+   background:#F0F0F0 ;
+   padding-top:3px;
+   border-top:1px solid #708090;
+   border-right:1px solid #708090;
+   border-bottom:1px solid #708090;
+   border-left:1px solid #708090; 
+   width:130px;
+   height:30px;
+   font-size:10pt;     
+}
+button{
+   cursor:pointer;
+} 

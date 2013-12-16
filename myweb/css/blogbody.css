@@ -1,0 +1,36 @@
+/* === CSS RESET === */
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+	background: #222;
+	/*color: #fff;*/
+  }
+  .toum{
+	background-color: rgba(255, 255, 204, 1.0);
+	color: #333;
+	padding: 19px 29px 29px;
+	margin: 0 auto 20px;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.toum img{
+	display:block;
+	margin:auto;
+}
+.toum h1 {
+	color: rgba(0, 0, 0, 1.0);
+	font: 500 30px/1.8 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+}
+.toum h2 {
+	color: rgba(0, 0, 0, 1.0);
+	font: 400 14.5px/1.5 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+}
+.toum h3 {
+	color: rgba(0, 0, 0, 1.0);
+	font: 400 15px/1.5 'Microsoft Yahei','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+}

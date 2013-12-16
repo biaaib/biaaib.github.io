@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Wu Yunpeng's Blog</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Le styles -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	
+	<style>
+	  body {
+		padding-top: 60px;
+		padding-bottom: 40px;
+		background: #222;
+		/*color: #fff;*/
+	  }
+	  .toum{
+	    background-color: rgba(255, 255, 204, 1.0);
+		color: #333;
+		padding: 19px 29px 29px;
+		margin: 0 auto 20px;
+		border: 1px solid #e5e5e5;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+		-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+		box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	}
+	.toum img{
+		display:block;
+		margin:auto;
+	}
+	.toum h1 {
+		color: rgba(0, 0, 0, 1.0);
+		font: 500 30px/1.8 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+	}
+	.toum h2 {
+		color: rgba(0, 0, 0, 1.0);
+		font: 400 14.5px/1.5 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+	}
+	.toum h3 {
+		color: rgba(0, 0, 0, 1.0);
+		font: 400 15px/1.5 'Microsoft Yahei','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+	}
+	.tspan{
+		color: rgba(0, 0, 0, 1.0);
+		font: 400 15px/1.5 'Microsoft Yahei','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+	}
+	</style>
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	  <script src="../assets/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+
+
+<script type="text/javascript"> 
+	$(function(){
+		$("#email").popover({trigger:'hover'});
+		$("#password").popover({trigger:'hover'});
+		$("#remail").popover({trigger:'hover'});
+		$("#rpassword").popover({trigger:'hover'});
+		
+		$('#remail').blur(function(){
+			reg=/^([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/gi;
+			if(!reg.test($(this).val()))
+			{
+				$('#semail').text("请输入正确的Email地址");
+			}
+			else{
+				$('#semail').text("");
+			}
+		});
+		$('#rpassword').blur(function(){
+			if( $(this).val().length<3 || $(this).val().length>12)
+			{
+				$('#spassword').text("请输入正确的password");
+			}
+			else{
+				$('#spassword').text("");
+			}
+		});
+		$("#reg").click(function(){
+			alert("注册成功");
+		});
+	});
+	
+	
+	
+	
+</script>
+<script>  </script>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="blog.html">Wu Yunpeng's blog</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="index.html">Homepage</a></li>
+              <li class="active"><a href="blog.html">Blog</a></li>
+              <li><a href="picture.html">Picture</a></li>
+			  <li><a href="game.html">Game</a></li>
+			  <li><a href="myself.html">About</a></li>
+            </ul>
+            <form class="navbar-form pull-right">
+              <input class="span2" type="text" placeholder="Email" id="email" rel="popover" data-content="请输入E-mail地址" data-placement="bottom">
+              <input class="span2" type="password" placeholder="Password" id="password" rel="popover" data-content="请输入密码" data-placement="bottom">
+              <button type="submit" class="btn" id="signIn">Sign in</button>
+			  <button type="submit" class="btn">Register</button>
+            </form>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+	
+	<br>
+	<br>
+	<br>
+	<div class="container">
+	<div class="span2"></div>
+	<div class="span7 toum">
+		<br>
+		<br>
+		<div class="text-center">
+			<span class="tspan">Email adress&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;</span>
+			<input class="span2" type="text" placeholder="Email" id="remail" rel="popover" data-content="请输入正确的Email地址,建议使用Gmail" data-placement="bottom"> 
+		</div> 
+		<div style="position:relative;left:57%"> <span id="semail" style="font-size:4px;color:red"></span> </div>
+        <div class="text-center">
+			<span class="tspan">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			<input class="span2" type="Password" placeholder="Password" id="rpassword" rel="popover" data-content="请输入正确的Password,长度为3-12位" data-placement="bottom">
+			<div style="position:relative;left:16%"> <span id="spassword" style="font-size:4px;color:red"></span> </div>
+		</div>
+		<div class="text-center">
+			<span class="tspan">Nickname	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			<input class="span2" type="password" placeholder="Nickname" id="rnickname"> 
+		</div>
+		<br>
+		<br>
+		<div class="text-right"> <button type="submit" class="btn" id="reg">Register</button> </div>
+	</div>
+	</div>
+	
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+	
+	
+
+  </body>
+</html>

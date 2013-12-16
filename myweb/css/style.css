@@ -1,0 +1,175 @@
+/* === CSS RESET === */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-spacing: 20px;
+}
+
+table td.left {
+	width: 200px;
+	text-align: right;
+}
+
+table td.right {
+	text-align: left;
+}
+/* === End of CSS RESET === */
+
+body {
+	background: url(../img/myself/classy_fabric.png);
+	color: white;
+	font-size: 20px;
+	font-family: Helvetica, Arial, sans-serif;
+	overflow: hidden;
+}
+h1 {
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 1.5em;
+}
+
+p {
+	margin-bottom: 6px;
+}
+
+a, a:visited {
+	color: white;
+	text-decoration: none;
+	border-bottom: 2px dotted;
+	transition: color 0.2s;
+}
+
+a:hover {
+	color: #AAA;
+}
+
+a:active {
+	color: lightblue;
+}
+
+
+
+.wrapper div {
+	position: absolute;
+}
+
+.settings, nav {
+	position: fixed;
+	z-index: 9999999;
+	bottom: 0;
+	background: rgba(10,10,10, 0.5);
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 20px;
+}
+
+
+nav {
+	left: 0;
+	border-radius: 0 10px 0 0;
+}
+
+nav li {
+	float: left;
+}
+
+nav a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	text-align: center;
+	transition: 0.25s;
+}
+
+nav li:last-child a {
+	border-radius: 0 10px 0 0;
+}
+
+nav a:hover {
+	background: rgba(15,15,15, 0.5);
+}
+
+.sp-canvas {
+	display: none;
+}
+
+.arrow {
+	position: relative;
+	display: inline-block;
+}
+
+.wrapper div {
+	width: 800px;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+.description {
+	top: 1000px;
+}
+
+.university {
+	top: 1700px;
+}
+
+.honour {
+	width: 900px;
+	top: 3100px;
+}
+
+.loves {
+	top: 3000px;
+	left: 2000px;
+}
+
+.enjoy {
+	top: 1950px;
+	left: 2000px;
+}
+
+.contact {
+	top: 0px;
+	left: 2000px;
+}
+
+
+@keyframes point-down {
+	from {
+		top: 0;
+	}
+	to {
+		top: 5px;
+	}
+}
+
+@keyframes highlight {
+	to {
+		background: lightblue;
+	}
+}

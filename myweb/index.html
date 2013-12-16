@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yunpeng Wu's Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <style type="text/css">
+	 div#wrap{
+	    height:300px;
+	    position:fixed;
+	    left:20%;
+	    top:65%;
+	    margin:-100px 0 0 -150px;
+		/*filter:alpha(Opacity=80);
+		-moz-opacity:0.5;
+		opacity: 0.5;
+		z-index:100;
+		background-color:#ffffff;*/
+	}
+	.toum{
+		background: url("img/homepagetitleb.jpg");
+	}
+	.hero-unit img {
+		/*max-width: 500px;*/
+		-webkit-animation: title-in 1s ease-out 0 1 forwards;
+		-webkit-transition: 500ms;
+		-moz-transition: 500ms;
+		transition: 500ms;
+	}
+	.hero-unit img:hover {
+		-webkit-transform: translateY(-5px) scale(1.05) rotate(2deg);
+		-moz-transform: translateY(-5px) scale(1.05) rotate(2deg);
+		transform: translateY(-5px) scale(1.05) rotate(2deg);
+	}
+	.panel-description {
+		background: rgba(255, 255, 255, 0.80);
+		color: #333;
+		padding: 0px;
+		margin-bottom: 80px;
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+		text-shadow: 1px 1px 2px #FFF;
+		-webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05); 
+		-moz-box-shadow:    0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
+		-ms-box-shadow:     0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);  
+		-o-box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
+		box-shadow:         0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
+	}
+	.panel-description h4 {
+		color: rgba(0, 0, 0, 1.0);
+		font: 500 45px/1.8 '华文行楷','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+	}
+	.panel-description h5 {
+		color: rgba(0, 0, 0, 0.6);
+		font: 400 14.5px/1.5 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+	}
+	.button-text-panel a {
+		position: relative;
+		margin: 0px;
+	}
+	.block-left {
+		padding: 35px 10px 15px 45px
+	}
+	.design {
+		padding: 0 5px 15px 45px;
+	}
+	.programming {
+		padding: 0 20px 10px 0;
+	}
+	img.profile {
+		max-width: 100px;
+		margin-top: 5px;
+		margin-bottom: 10px;
+		-webkit-transition: 500ms;
+		-moz-transition: 500ms;
+		transition: 500ms;
+		
+		-webkit-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
+		-moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
+		box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
+	}
+  </style>
+  <body>
+	
+	<div class="container text-center hero-unit toum">
+        <h1><img src="img/homepagetitle.png"></h1>
+    </div>
+	
+	
+	<div class="container-fluid row-fluid">
+		<div id="wrap" class="span10 offset1 panel-description text-center">
+			<div>
+				<img class="profile img-circle loading" src="img/indexself.jpg">
+				<br>
+				<br>
+				<h4>你好，我是来自计算机应用113班的吴云鹏</h4>
+				<hr class="soften">
+				<p><span class="hidden-phone">这是我的个人网站，</span>欢迎访问<a href="blog.html" target="_blank">我的博客</a>和观看<a href="myself.html" target="_blank">我的介绍</a></p>
+            </div>
+		</div>
+	</div>
+	<!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.backstretch.min.js"></script>
+	<script> $.backstretch("img/indexback.jpg"); </script>
+
+  </body>
+</html>

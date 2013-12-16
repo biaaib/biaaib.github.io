@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>iTunes的cover背景字体配色的故事</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Le styles -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/article.css" rel="stylesheet" media="screen">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	  <script src="../assets/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="blog.html">Wu Yunpeng's blog</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="index.html">Homepage</a></li>
+              <li class="active"><a href="blog.html">Blog</a></li>
+              <li><a href="picture.html">Picture</a></li>
+			  <li><a href="game.html">Game</a></li>
+			  <li><a href="myself.html">About</a></li>
+            </ul>
+            <form class="navbar-form pull-right">
+              <input class="span2" type="text" placeholder="Email" id="email" rel="popover" data-content="请输入E-mail地址" data-placement="bottom">
+              <input class="span2" type="password" placeholder="Password" id="password" rel="popover" data-content="请输入密码" data-placement="bottom">
+              <button type="submit" class="btn" id="signIn">Sign in</button>
+			  <a href="register.html"><button type="button" class="btn">Register</button></a>
+            </form>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+	
+	<br>
+	<br>
+    <div class="container">
+	<div class="span2"></div>
+	<div class="span7 toum">
+		<h1 class="text-center">iTunes的cover背景字体配色的故事</h1>
+		<img src="img/article3-1.jpg">
+		<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iTunes11的字体配色到底是怎么算出来的呢？</h2>
+		<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从前，有一位名叫Nobuyuki Otsu的同学提出了Otsu Method， 可以对灰度图像进行thresholding。原理是找到一个或多个threshold来maximize inter-class variance。</h2>
+		<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://en.wikipedia.org/wiki/Otsu%27s_method">http://en.wikipedia.org/wiki/Otsu%27s_method</a></h2>
+		<img src="img/article3-2.jpg">
+		<img src="img/article3-3.jpg">
+		<img src="img/article3-4.jpg">
+		<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我想，如果把图片的灰度直方图换成颜色直方图，是不是就能找到两个threshold，并得出三个class mean来作为三种代表颜色呢？</h2>
+		<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实际编程的时候发现，颜色直方图的维度远大于灰度直方图，查找threshold变得很慢。。。如果直接使用颜色直方图的三个maximum，用上图取得的三种颜色如下，显然没有iTunes里面算法的效果好。。。</h2>
+		<img src="img/article3-5.jpg">
+		<h2>然后我最后发现了这个，原来这个问题的答案早就不再是一个秘密>_<：</h2>
+		<h2><a href="http://stackoverflow.com/questions/13637892/how-does-the-algorithm-to-color-the-song-list-in-itunes-11-work">http://stackoverflow.com/questions/13637892/how-does-the-algorithm-to-color-the-song-list-in-itunes-11-work</a></h2>
+		<h2><a href="http://www.panic.com/blog/2012/12/itunes-11-and-colors/">http://www.panic.com/blog/2012/12/itunes-11-and-colors/</a></h2>
+		<h2><a href="https://github.com/panicinc/ColorArt">https://github.com/panicinc/ColorArt</a></h2>
+		<h2>重点：1. iTunes计算的dominant color是根据封面图片外围的一圈的像素。</h2>
+		<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Euclidean distance 用来测量两个颜色的距离。为了符合人的感官，RGB要转换为YUV。</h2>
+		<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. 大体方法就是找直方图的maximum并且排除距离太近的maximum。跟我下午说的一条豆瓣说类似。。。</h2>
+		<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. 我发现iTunes11有时候会使用cover图片没有的颜色。（例如图片由两种颜色组成）。估计是增加了其他的判断条件，然后加入黑色或白色。</h2>
+	</div>
+	</div>
+
+	
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.10.2.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/blog.js"> </script>
+
+  </body>
+</html>
