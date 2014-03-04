@@ -4,11 +4,11 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>San's world</title>
+ <title>bia's blog</title>
  <link href="http://biaaib.github.io/atom.xml" rel="self"/>
  <link href="http://biaaib.github.io/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://hueidou.github.com/</id>
+ <id>http://biaaib.github.com/</id>
  <author>
    <name>biaaib</name>
    <email>biaaib@gmail.com</email>
